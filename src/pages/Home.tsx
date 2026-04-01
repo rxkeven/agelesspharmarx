@@ -340,6 +340,11 @@ export function Home() {
               <p>Integrity is our backbone. Innovation is our method.</p>
               <p>Luxury is our aesthetic. Hospitality is our culture.</p>
             </div>
+            <div className="pt-4">
+              <p className="text-sm text-[#E5E5E5]/60">
+                Contact us: <a href="mailto:info@agelesspharmarx.com" className="text-[#d4af37] hover:text-[#b8941f] transition-colors">info@agelesspharmarx.com</a>
+              </p>
+            </div>
             <div className="pt-2 flex items-center justify-center space-x-2">
               <Link to="/terms.html" className="text-xs text-[#d4af37] hover:text-[#b8941f] transition-colors">
                 Terms and Conditions
