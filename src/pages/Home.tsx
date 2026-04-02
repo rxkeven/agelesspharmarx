@@ -99,11 +99,11 @@ export function Home() {
                 </div>
 
                 <p className="text-xs text-[#E5E5E5]/40 italic mt-4 leading-relaxed">
-                  By submitting your mobile number, you agree to receive recurring account notifications and promotional messages from Ageless Pharma RX. Text message & data rates may apply. Message frequency may vary. You can opt-out any time by replying STOP. Click{' '}
+                  By submitting your mobile number, you agree to receive recurring account notifications and promotional messages from Ageless Pharma Rx. Text message & data rates may apply. Message frequency may vary. You can opt-out any time by replying STOP. Click{' '}
                   <Link to="/privacy.html" className="text-[#d4af37] hover:text-[#b8941f] transition-colors">
                     HERE
                   </Link>
-                  {' '}to see our Privacy Policy.
+                  {' '}to see our Privacy Policy. For HELP call 972-292-9833.
                 </p>
               </div>
             </div>
