@@ -297,14 +297,6 @@ export function TermsAndConditions() {
               <p>Integrity is our backbone. Innovation is our method.</p>
               <p>Luxury is our aesthetic. Hospitality is our culture.</p>
             </div>
-            <div className="pt-4 space-y-2">
-              <p className="text-sm text-[#E5E5E5]/60">
-                Contact us: <a href="mailto:info@agelesspharmarx.com" className="text-[#d4af37] hover:text-[#b8941f] transition-colors">info@agelesspharmarx.com</a>
-              </p>
-              <p className="text-sm text-[#E5E5E5]/60">
-                For help call: <a href="tel:972-292-9833" className="text-[#d4af37] hover:text-[#b8941f] transition-colors">972-292-9833</a>
-              </p>
-            </div>
           </div>
         </div>
       </footer>

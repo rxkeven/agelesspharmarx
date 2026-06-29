@@ -1,9 +1,21 @@
-import { Check, Shield, Award, Sparkles, Package, Users, Globe, Smartphone, Bell, Activity, Heart, Box, QrCode, Snowflake, Clock, FileCheck } from 'lucide-react';
+import { useEffect } from 'react';
+import { Check, Shield, Sparkles, Package, Users, Globe, Smartphone, Bell, Activity, Heart, Box, QrCode, Snowflake, Clock, FileCheck, Leaf, Zap, Star } from 'lucide-react';
 import { DNAHelix, MoleculeIcon, GeometricPattern, PeptideChain, FloatingParticles } from '../components/VisualElements';
 import { Logo } from '../components/Logo';
 import { Link } from 'react-router-dom';
 
 export function Home() {
+  useEffect(() => {
+    if (document.getElementById('lc-form-script')) return;
+    const script = document.createElement('script');
+    script.id = 'lc-form-script';
+    script.src = 'https://link.msgsndr.com/js/form-embed/v1.js';
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      script.remove();
+    };
+  }, []);
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-[#F8F8F8]">
       <header className="relative z-50 border-b border-[#d4af37]/20 bg-[#0a0a0a]/95 backdrop-blur-md sticky top-0">
@@ -23,26 +35,24 @@ export function Home() {
             <div className="space-y-8">
               <div className="space-y-6">
                 <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight tracking-tight">
-                  This is the New World of{' '}
-                  <span className="text-[#d4af37]">Peptides</span>
+                  The Future of{' '}
+                  <span className="text-[#d4af37]">Health &amp; Longevity</span>
                 </h1>
 
                 <div className="h-1 w-24 bg-gradient-to-r from-[#d4af37] to-transparent" />
 
                 <p className="text-xl lg:text-2xl font-light leading-relaxed text-[#E5E5E5]">
-                  Ageless Pharma RX is shaping it. Where pharmaceutical purity meets luxury packaging,
-                  technology integration, and concierge-level hospitality.
+                  Ageless Pharma RX is redefining what a pharmacy can be. Where pharmaceutical precision
+                  meets luxury care, cutting-edge science, and a complete solution for your patients' wellness.
                 </p>
 
                 <p className="text-lg text-[#d4af37] font-medium italic">
-                  Performance begins with certainty.
+                  Optimized health begins with an exceptional pharmacy.
                 </p>
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
                 <StatBadge icon={FileCheck} label="503A Licensed" />
-                <StatBadge icon={Shield} label="GMP Compliant" />
-                <StatBadge icon={Award} label="FDA Registered" />
                 <StatBadge icon={Snowflake} label="Cold Chain Secure" />
                 <StatBadge icon={Clock} label="24/7 Support" />
               </div>
@@ -55,15 +65,11 @@ export function Home() {
                 <div className="space-y-4 mb-6">
                   <h3 className="text-2xl font-semibold text-[#d4af37]">Partner With Excellence</h3>
                   <p className="text-[#E5E5E5] leading-relaxed">
-                    Discover how Ageless Pharma RX elevates your practice with pharmaceutical-grade peptides,
-                    cutting-edge technology, and unmatched hospitality. Join the clinicians who refuse to compromise
-                    on quality, transparency, or patient experience.
+                    Discover how Ageless Pharma RX elevates your practice with a full-spectrum compounding
+                    pharmacy, cutting-edge technology, and unmatched hospitality. Join the clinicians who
+                    refuse to compromise on quality, transparency, or patient experience.
                   </p>
                   <div className="flex flex-wrap gap-3 pt-2">
-                    <div className="flex items-center space-x-2 text-sm text-[#d4af37]">
-                      <Check className="w-4 h-4" />
-                      <span>GMP Compliant</span>
-                    </div>
                     <div className="flex items-center space-x-2 text-sm text-[#d4af37]">
                       <Check className="w-4 h-4" />
                       <span>Dedicated Support</span>
@@ -76,34 +82,31 @@ export function Home() {
                 </div>
 
                 <div className="bg-[#0a0a0a]/80 rounded-xl border border-[#d4af37]/10 overflow-hidden" style={{ height: '520px' }}>
-                  <div dangerouslySetInnerHTML={{
-                    __html: `<iframe
-    src="https://api.leadconnectorhq.com/widget/form/iUNCAf8qZtHWXdzH9fk6"
-    style="width:100%;height:100%;border:none;border-radius:3px;margin-top:-40px"
-    id="inline-iUNCAf8qZtHWXdzH9fk6"
-    data-layout="{'id':'INLINE'}"
-    data-trigger-type="alwaysShow"
-    data-trigger-value=""
-    data-activation-type="alwaysActivated"
-    data-activation-value=""
-    data-deactivation-type="neverDeactivate"
-    data-deactivation-value=""
-    data-form-name="Ageless Pharma RX"
-    data-height="520"
-    data-layout-iframe-id="inline-iUNCAf8qZtHWXdzH9fk6"
-    data-form-id="iUNCAf8qZtHWXdzH9fk6"
-    title="Ageless Pharma RX"
-        >
-</iframe>`
-                  }} />
+                  <iframe
+                    src="https://api.leadconnectorhq.com/widget/form/iUNCAf8qZtHWXdzH9fk6"
+                    style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
+                    id="inline-iUNCAf8qZtHWXdzH9fk6"
+                    data-layout="{'id':'INLINE'}"
+                    data-trigger-type="alwaysShow"
+                    data-trigger-value=""
+                    data-activation-type="alwaysActivated"
+                    data-activation-value=""
+                    data-deactivation-type="neverDeactivate"
+                    data-deactivation-value=""
+                    data-form-name="Ageless Pharma RX"
+                    data-height="520"
+                    data-layout-iframe-id="inline-iUNCAf8qZtHWXdzH9fk6"
+                    data-form-id="iUNCAf8qZtHWXdzH9fk6"
+                    title="Ageless Pharma RX"
+                  />
                 </div>
 
                 <p className="text-xs text-[#E5E5E5]/40 italic mt-4 leading-relaxed">
-                  By submitting your mobile number, you agree to receive recurring account notifications and promotional messages from Ageless Pharma Rx. Text message & data rates may apply. Message frequency may vary. You can opt-out any time by replying STOP. Click{' '}
+                  By submitting your mobile number, you agree to receive recurring account notifications and promotional messages from PharmacyName. Text message &amp; data rates may apply. Message frequency may vary. You can opt-out any time by replying STOP. Click{' '}
                   <Link to="/privacy.html" className="text-[#d4af37] hover:text-[#b8941f] transition-colors">
                     HERE
                   </Link>
-                  {' '}to see our Privacy Policy. For HELP call 972-292-9833.
+                  {' '}to see our Privacy Policy.
                 </p>
               </div>
             </div>
@@ -130,8 +133,8 @@ export function Home() {
                 title="Integrity"
                 subtitle="Our Backbone"
                 features={[
-                  "GMP-compliant sterile manufacturing",
-                  "Third-party sterility testing",
+                  "503A Licensed sterile manufacturing",
+                  "Third-party sterility and potency testing",
                   "Transparent COAs with every batch",
                   "Regulatory alignment, no shortcuts"
                 ]}
@@ -141,7 +144,7 @@ export function Home() {
                 title="Innovation"
                 subtitle="Our Method"
                 features={[
-                  "Tech-integrated peptide delivery",
+                  "Science-backed longevity formulations",
                   "Predictive dosing through app ecosystems",
                   "Continuous upgrades and improvements",
                   "Evidence-based educational systems"
@@ -173,6 +176,51 @@ export function Home() {
           </section>
 
           <section className="mb-32">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-semibold mb-6">
+                A Complete <span className="text-[#d4af37]">Longevity Pharmacy</span>
+              </h2>
+              <div className="h-1 w-32 bg-gradient-to-r from-transparent via-[#d4af37] to-transparent mx-auto mb-4" />
+              <p className="text-xl text-[#E5E5E5] max-w-3xl mx-auto">
+                Every compound your patients need, formulated to the highest standard
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              <SpecialtyCard
+                icon={Leaf}
+                title="Hormone Optimization"
+                description="Precision bioidentical hormone therapy formulated to each patient's unique profile, supporting vitality, balance, and long-term wellbeing."
+              />
+              <SpecialtyCard
+                icon={Zap}
+                title="Performance & Recovery"
+                description="Advanced compounded formulas designed to enhance physical performance, accelerate recovery, and support sustained energy at every stage of life."
+              />
+              <SpecialtyCard
+                icon={Star}
+                title="Longevity Protocols"
+                description="Cutting-edge longevity compounds informed by the latest research — helping clinicians build comprehensive, results-driven patient programs."
+              />
+              <SpecialtyCard
+                icon={Activity}
+                title="Metabolic Health"
+                description="Targeted solutions for metabolic optimization, weight management, and blood sugar regulation, tailored to each patient's clinical needs."
+              />
+              <SpecialtyCard
+                icon={Heart}
+                title="Cognitive Wellness"
+                description="Neuroprotective and nootropic formulations supporting brain health, mental clarity, and long-term cognitive function."
+              />
+              <SpecialtyCard
+                icon={Globe}
+                title="Immune & Cellular Health"
+                description="Foundational compounds that support immune resilience, cellular repair, and the biological processes underlying healthy aging."
+              />
+            </div>
+          </section>
+
+          <section className="mb-32">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="relative">
                 <div className="absolute -inset-8 bg-gradient-to-br from-[#d4af37]/10 to-transparent blur-3xl rounded-full" />
@@ -191,9 +239,9 @@ export function Home() {
                   Precision at <span className="text-[#d4af37]">Every Step</span>
                 </h2>
                 <p className="text-lg text-[#E5E5E5] leading-relaxed">
-                  From compounding to delivery, every touchpoint is designed for excellence.
-                  Our pharmaceutical-grade processes ensure your patients receive peptides that
-                  meet the highest standards of quality and efficacy.
+                  From compounding to delivery, every touchpoint is engineered for excellence.
+                  Our pharmaceutical-grade processes ensure your patients receive formulations that
+                  meet the highest standards of quality, safety, and efficacy.
                 </p>
                 <div className="space-y-4 pt-4">
                   <FeaturePoint text="Third-party tested for purity and potency" />
@@ -217,7 +265,7 @@ export function Home() {
                 </h2>
                 <p className="text-lg text-[#E5E5E5] leading-relaxed">
                   Where pharmacy meets technology. Seamlessly manage prescriptions, track protocols,
-                  and provide elevated patient care through our comprehensive digital platform.
+                  and deliver elevated patient care through our comprehensive digital platform.
                 </p>
                 <div className="space-y-4 pt-4">
                   <AppFeature icon={Users} text="Prescribing portal for clinicians (coming soon)" />
@@ -255,7 +303,7 @@ export function Home() {
               <LuxuryFeature
                 icon={Box}
                 title="Starview Blister Packaging"
-                description="Metallic foil seals protecting pharmaceutical-grade peptides with visual elegance"
+                description="Metallic foil seals protecting pharmaceutical-grade compounds with visual elegance"
               />
               <LuxuryFeature
                 icon={QrCode}
@@ -301,10 +349,11 @@ export function Home() {
                 <div className="relative bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] rounded-3xl p-12 border border-[#d4af37]/30 shadow-2xl shadow-[#d4af37]/10 backdrop-blur-sm">
                   <div className="text-center space-y-6">
                     <h2 className="text-3xl lg:text-4xl font-semibold">
-                      Join the <span className="text-[#d4af37]">Peptide Revolution</span>
+                      Elevate Your <span className="text-[#d4af37]">Patient Care</span>
                     </h2>
                     <p className="text-lg text-[#E5E5E5] leading-relaxed max-w-2xl mx-auto">
-                      We will lead the peptide revolution out of research obscurity and into mainstream longevity medicine.
+                      Partner with the pharmacy built for longevity medicine — where every formulation,
+                      every interaction, and every delivery is held to the highest standard.
                     </p>
                     <div className="pt-4">
                       <button
@@ -331,22 +380,14 @@ export function Home() {
         <div className="max-w-7xl mx-auto px-6 py-12">
           <div className="text-center space-y-4">
             <p className="text-[#E5E5E5] font-medium text-lg">
-              Ageless Pharma RX <span className="text-[#d4af37]">•</span> Created by Ageless Future
+              Ageless Pharma RX
             </p>
             <p className="text-sm text-[#E5E5E5]/60 italic max-w-2xl mx-auto">
-              This is the new world of peptides. Ageless Pharma RX is shaping it.
+              The premier compounding pharmacy for health optimization and longevity medicine.
             </p>
             <div className="pt-4 text-xs text-[#E5E5E5]/40">
               <p>Integrity is our backbone. Innovation is our method.</p>
               <p>Luxury is our aesthetic. Hospitality is our culture.</p>
-            </div>
-            <div className="pt-4 space-y-2">
-              <p className="text-sm text-[#E5E5E5]/60">
-                Contact us: <a href="mailto:info@agelesspharmarx.com" className="text-[#d4af37] hover:text-[#b8941f] transition-colors">info@agelesspharmarx.com</a>
-              </p>
-              <p className="text-sm text-[#E5E5E5]/60">
-                For help call: <a href="tel:972-292-9833" className="text-[#d4af37] hover:text-[#b8941f] transition-colors">972-292-9833</a>
-              </p>
             </div>
             <div className="pt-2 flex items-center justify-center space-x-2">
               <Link to="/terms.html" className="text-xs text-[#d4af37] hover:text-[#b8941f] transition-colors">
@@ -427,6 +468,33 @@ function PillarCard({
             </div>
           ))}
         </div>
+      </div>
+    </div>
+  );
+}
+
+function SpecialtyCard({
+  icon: Icon,
+  title,
+  description
+}: {
+  icon: any;
+  title: string;
+  description: string;
+}) {
+  return (
+    <div className="group relative bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] rounded-xl p-8 border border-[#d4af37]/20 hover:border-[#d4af37]/40 transition-all duration-500 hover:shadow-xl hover:shadow-[#d4af37]/10 hover:-translate-y-1">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#d4af37]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl" />
+      <div className="relative space-y-4">
+        <div className="w-12 h-12 rounded-xl bg-[#d4af37]/20 flex items-center justify-center group-hover:bg-[#d4af37]/30 transition-colors duration-300">
+          <Icon className="w-6 h-6 text-[#d4af37]" />
+        </div>
+        <h3 className="text-xl font-semibold text-[#F8F8F8] group-hover:text-[#d4af37] transition-colors duration-300">
+          {title}
+        </h3>
+        <p className="text-[#E5E5E5] leading-relaxed">
+          {description}
+        </p>
       </div>
     </div>
   );
