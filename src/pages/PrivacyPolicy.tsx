@@ -163,7 +163,7 @@ export function PrivacyPolicy() {
                   <li>Access controls and authentication procedures</li>
                   <li>Employee training on data protection and privacy</li>
                   <li>Compliance with HIPAA and other healthcare privacy regulations</li>
-                  <li>Secure storage in 503A Licensed Pharmacy facilities</li>
+                  <li>Secure storage in GMP-compliant facilities</li>
                 </ul>
                 <p className="text-[#E5E5E5] italic mt-4">
                   While we strive to protect your information, no method of transmission over the internet or electronic storage is 100% secure. We cannot guarantee absolute security but are committed to maintaining industry-leading standards.
@@ -312,6 +312,14 @@ export function PrivacyPolicy() {
             <div className="pt-4 text-xs text-[#E5E5E5]/40">
               <p>Integrity is our backbone. Innovation is our method.</p>
               <p>Luxury is our aesthetic. Hospitality is our culture.</p>
+            </div>
+            <div className="pt-4 space-y-2">
+              <p className="text-sm text-[#E5E5E5]/60">
+                Contact us: <a href="mailto:info@agelesspharmarx.com" className="text-[#d4af37] hover:text-[#b8941f] transition-colors">info@agelesspharmarx.com</a>
+              </p>
+              <p className="text-sm text-[#E5E5E5]/60">
+                For help call: <a href="tel:972-292-9833" className="text-[#d4af37] hover:text-[#b8941f] transition-colors">972-292-9833</a>
+              </p>
             </div>
           </div>
         </div>
